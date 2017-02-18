@@ -1,0 +1,379 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    color: #000000;
+    cursor: pointer;
+}
+body{
+    background-color: #ededed;
+    background: url("../images/fcc/net-white.png") repeat center center fixed;
+}
+/*隐藏滚动条*/
+/*::-webkit-scrollbar{*/
+    /*display:none;*/
+/*}*/
+#wrapper{
+    width: 100%;
+    /*background-color: #ededed;*/
+    /*height: 500px;*/
+    color: #000000;
+    font-family: 微软雅黑,Verdana,Arial;
+    font-size: 24px;
+}
+
+/*技能背景 start*/
+.body-background{
+    display: block;
+}
+.bg1, .bg2, .bg3 {
+    position: fixed;
+
+    width:100%;
+    height:100%;
+    background-repeat: repeat;
+}
+.bg1{
+    z-index:9;
+    background-image:url("../images/fcc/bubbles.png");
+}
+.bg2 {
+    z-index:8;
+    background-image:url("../images/fcc/bubbles2.png");
+}
+.bg3 {
+    z-index:7;
+    background-image:url("../images/fcc/bubbles3.png");
+}
+/*背景 end*/
+
+/*开头 start*/
+#wrapper .introduced{
+    width: 80%;
+    height: 420px;
+    margin: 0px auto;
+    background-color: #fff;
+    background: url("../images/fcc/title.png") no-repeat 100% center;
+    background-size: cover;
+    border: 10px solid #ffffff;
+    box-shadow: 2px 2px 2px #999;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: fixed;
+    left: 10%;
+    z-index: 10;
+    text-align: center;
+}
+#wrapper .introduced h1{
+    margin-top: 450px;
+}
+#wrapper .introduced h3{
+    margin-top:20px;
+}
+/*end*/
+
+/*技能start*/
+#wrapper .skills{
+    width: 80%;
+    position:  fixed;
+    top: 10%;
+    left: 10%;
+    z-index: 20;
+    text-align: center;
+}
+#wrapper .skills h2{
+}
+#wrapper .skills .skill-top,.skill-bottom{
+    width: 80%;
+    position:  fixed;
+    top: 15%;
+    z-index: 20;
+    font-size: 0px;
+}
+#wrapper .skills .skill-bottom{
+    top: 50%;
+}
+/*图标字体 start*/
+#wrapper .skill-icon{
+    color: darkgreen;
+    font-size: 150px;
+    display: inline-block;
+    width: 25%;
+    margin-bottom: 50px;
+    transition: all 0.5s;
+}
+#wrapper .skill-icon:hover{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+#wrapper .skill-icon p{
+    color: #000000;
+    font-size: 24px;
+}
+/*字体 end*/
+/*技能end*/
+
+/*活动 start*/
+#wrapper #activities{
+    width: 600px;
+    position: fixed;
+    top: 25%;
+    left: 33%;
+    z-index: 30;
+
+    height: 400px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 2400px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /*transition: all 1.5s;*/
+    display: none;
+}
+#wrapper #activities .pic{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    transition: all 1.5s;
+}
+#wrapper #activities .pic:nth-child(1){
+    background: url("../images/fcc/activities-1.jpg") no-repeat center center;
+    transform:rotateY(0deg) translateZ(413px);
+    background-size: cover;
+}
+#wrapper #activities .pic:nth-child(2){
+    background: url("../images/fcc/activities-2.jpg") no-repeat center center;
+    transform:rotateY(72deg) translateZ(413px);
+    background-size: cover;
+}
+#wrapper #activities .pic:nth-child(3){
+    background: url("../images/fcc/activities-3.jpg") no-repeat center center;
+    transform:rotateY(144deg) translateZ(413px);
+    background-size: cover;
+}
+#wrapper #activities .pic:nth-child(4){
+    background: url("../images/fcc/activities-4.jpg") no-repeat center center;
+    transform:rotateY(216deg) translateZ(413px);
+    background-size: cover;
+}
+#wrapper #activities .pic:nth-child(5){
+    background: url("../images/fcc/activities-5.jpg") no-repeat center center;
+    transform:rotateY(288deg) translateZ(413px);
+    background-size: cover;
+}
+/*end*/
+
+/*成员 start*/
+#wrapper .members{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 40;
+}
+#wrapper .members .bg{
+    width: 120%;
+    font-size: 0px;
+    /*background-color: yellow;*/
+}
+#wrapper .members .bg .bg-part{
+    display: inline-block;
+}
+#wrapper .members .bg .bg-part img{
+
+}
+/*end*/
+
+/*加入 start*/
+#wrapper .join{
+    font-size: 0px;
+    /*每次载入页面的时候，join模块总是跳出，此方法可以解决*/
+    display: none;
+}
+#wrapper .join-icon{
+    position: fixed;
+    font-size: 250px;
+    display: inline-block;
+    text-align: center;
+    z-index: 50;
+}
+#wrapper .join-icon p{
+    font-size: 24px;
+}
+/*end*/
+
+/*路径字体start*/
+#图层_1{
+    position: fixed;
+    top: 85%;
+    left: 20%;
+    z-index: 61;
+}
+#XMLID_20_{
+    stroke-width:0.5;
+    stroke: black;
+    fill:none;
+    stroke-linejoin:round;
+    stroke-dasharray:1280;
+    stroke-dashoffset:1280;
+
+    animation-duration: 5s;
+    animation-name: fcc;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: both ;
+    -moz-animation-fill-mode: both ;
+    -o-animation-fill-mode: both ;
+    animation-fill-mode: both ;
+
+}
+@keyframes fcc {
+    80%{
+        fill: none;
+    }
+    to{
+        stroke-dashoffset:0;
+        fill:black;
+    }
+}
+/*end*/
+
+/*导航栏 start*/
+#wrapper nav{
+    position: fixed;
+    top:10%;
+    left:-1%;
+    z-index: 100;
+    color: #ffffff;
+
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin:left bottom;
+    -moz-transform-origin:left bottom;
+    -ms-transform-origin:left bottom;
+    -o-transform-origin:left bottom;
+    transform-origin:left bottom;
+
+    animation-duration: 2s;
+    animation-name: fcc-nav;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both ;
+    -moz-animation-fill-mode: both ;
+    -o-animation-fill-mode: both ;
+    animation-fill-mode: both ;
+}
+@keyframes fcc-nav {
+    from{
+        transform: rotate(-90deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+#wrapper nav .logo{
+    background: url("../images/fcc/bar.svg") no-repeat 95% center;
+    background-size: 10%;
+    cursor: default;
+}
+#wrapper nav .navigation ul{
+    list-style-type: none;
+    display: none;
+    opacity: 0.8;
+}
+#wrapper nav .logo,.navigation ul li{
+    width: 250px;
+    height: 30px;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 2px;
+    padding: 10px;
+    padding-left: 30px;
+}
+#wrapper nav .navigation ul li:hover{
+    background-color: #222222;
+}
+.li_current{
+    background: url("../images/fcc/sign.svg") no-repeat 95% center;
+    background-size: 10%;
+}
+/*end*/
+
+/*各区域标题 start*/
+.title{
+    width: 320px;
+    height: 90px;
+    background-color: #ff4f00;
+    background-size: 20%;
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    z-index: 100;
+    box-shadow: 0px 0px 20px #20648b;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#wrapper .title .head{
+    width: 260px;
+    height: 50px;
+    margin: 20px auto;
+    text-align: center;
+    z-index: 100;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    perspective: 300px;
+}
+#wrapper .title .head .header{
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    line-height: 50px;
+    background-color: #ff4f00;
+    color: #fff;
+}
+#wrapper .title .head .header:nth-child(1){
+    -webkit-transform: rotateX(0deg) translateZ(25px);
+    -moz-transform: rotateX(0deg) translateZ(25px);
+    -ms-transform: rotateX(0deg) translateZ(25px);
+    -o-transform: rotateX(0deg) translateZ(25px);
+    transform: rotateX(0deg) translateZ(25px);
+}
+#wrapper .title .head .header:nth-child(2){
+    -webkit-transform: rotateX(90deg) translateZ(25px);
+    -moz-transform: rotateX(90deg) translateZ(25px);
+    -ms-transform: rotateX(90deg) translateZ(25px);
+    -o-transform: rotateX(90deg) translateZ(25px);
+    transform: rotateX(90deg) translateZ(25px);
+}
+#wrapper .title .head .header:nth-child(3){
+    -webkit-transform: rotateX(180deg) translateZ(25px);
+    -moz-transform: rotateX(180deg) translateZ(25px);
+    -ms-transform: rotateX(180deg) translateZ(25px);
+    -o-transform: rotateX(180deg) translateZ(25px);
+    transform: rotateX(180deg) translateZ(25px);
+}
+#wrapper .title .head .header:nth-child(4){
+    -webkit-transform: rotateX(270deg) translateZ(25px);
+    -moz-transform: rotateX(270deg) translateZ(25px);
+    -ms-transform: rotateX(270deg) translateZ(25px);
+    -o-transform: rotateX(270deg) translateZ(25px);
+    transform: rotateX(270deg) translateZ(25px);
+}
+/*end*/
