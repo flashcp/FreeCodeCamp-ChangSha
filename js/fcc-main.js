@@ -91,7 +91,7 @@ $(function () {
     })
     //end
 
-    //活动图片展示 start
+    //chrome活动图片展示 start
     var activities_n= 0,pic=$('.pic'),activities_k= 0,activities_timer;
     console.log(pic[0]);
     function activities() {
@@ -118,6 +118,9 @@ $(function () {
     });
     //end
 
+    //ie活动图片展示 start
+    //end
+
     //检测ie start
     (function (){
         var userAgent = navigator.userAgent,
@@ -129,7 +132,7 @@ $(function () {
                 console.log('ie');
             }
             else{
-                console.log('jb');
+                console.log('other');
             }
         }
         var browserMatch = uaMatch(ua);

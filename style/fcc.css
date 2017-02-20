@@ -212,39 +212,68 @@ body{
 /*end*/
 
 /*路径字体start*/
-#图层_1{
-    position: fixed;
-    top: 85%;
-    left: 20%;
-    z-index: 61;
+.introduced-direction-wrap{
+    width: 50px;
+    height: 100px;
+    margin: 20px auto;
+    overflow: hidden;
 }
-#XMLID_20_{
-    stroke-width:0.5;
-    stroke: black;
-    fill:none;
-    stroke-linejoin:round;
-    stroke-dasharray:1280;
-    stroke-dashoffset:1280;
+.introduced-direction{
+    width: 50px;
+    height: 180px;
+    background: url("../images/fcc/direction.svg") no-repeat center center;
+    background-size: cover;
 
-    animation-duration: 5s;
-    animation-name: fcc;
-    animation-iteration-count: 1;
-    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: direction;
+    /*animation-delay: 1s;*/
     -webkit-animation-fill-mode: both ;
     -moz-animation-fill-mode: both ;
     -o-animation-fill-mode: both ;
     animation-fill-mode: both ;
-
 }
-@keyframes fcc {
-    80%{
-        fill: none;
+@keyframes direction {
+    from{
+        margin-top: 0px;
     }
     to{
-        stroke-dashoffset:0;
-        fill:black;
+        margin-top: 100px;
     }
 }
+
+/*#图层_1{*/
+    /*position: fixed;*/
+    /*top: 85%;*/
+    /*left: 20%;*/
+    /*z-index: 61;*/
+/*}*/
+/*#XMLID_20_{*/
+    /*stroke-width:0.5;*/
+    /*stroke: black;*/
+    /*fill:none;*/
+    /*stroke-linejoin:round;*/
+    /*stroke-dasharray:1280;*/
+    /*stroke-dashoffset:1280;*/
+
+    /*animation-duration: 5s;*/
+    /*animation-name: fcc;*/
+    /*animation-iteration-count: 1;*/
+    /*animation-delay: 1s;*/
+    /*-webkit-animation-fill-mode: both ;*/
+    /*-moz-animation-fill-mode: both ;*/
+    /*-o-animation-fill-mode: both ;*/
+    /*animation-fill-mode: both ;*/
+
+/*}*/
+/*@keyframes fcc {*/
+    /*80%{*/
+        /*fill: none;*/
+    /*}*/
+    /*to{*/
+        /*stroke-dashoffset:0;*/
+        /*fill:black;*/
+    /*}*/
+/*}*/
 /*end*/
 
 /*导航栏 start*/
