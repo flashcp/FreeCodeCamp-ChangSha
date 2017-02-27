@@ -91,38 +91,40 @@ $(function () {
     })
     //end
 
-    //chrome活动图片展示 start
-    var activities_n= 0,pic=$('.pic'),activities_k= 0,activities_timer;
-    console.log(pic[0]);
-    function activities() {
-        //遍历开始前n的初始值重置
-        activities_n=activities_k++;
-        pic.each(function (i,j) {
-            console.log($(this));
-            console.log(i);
-            console.log(activities_n,100);
-            //每次遍历n自加1，遍历开始前n的初始值重置
-            $(this).css('transform','rotateY('+(++activities_n*72)+'deg) translateZ(480px)');
-        });
-    }
-    //activities_timer = setInterval(activities,1500);
-
-    $('#activities').on({
-        'click':activities,
-        //'mouseover':function () {
-        //    clearInterval(activities_timer)
-        //},
-        //'mouseout': function () {
-        //    activities_timer = setInterval(activities,2500);
-        //}
-    });
-    //end
+        //注释开始点
+    ////chrome活动图片展示 start
+    //var activities_n= 0,pic=$('.pic'),activities_k= 0,activities_timer;
+    //console.log(pic[0]);
+    //function activities() {
+    //    //遍历开始前n的初始值重置
+    //    activities_n=activities_k++;
+    //    pic.each(function (i,j) {
+    //        console.log($(this));
+    //        console.log(i,99);
+    //        console.log(activities_n,100);
+    //        //每次遍历n自加1，遍历开始前n的初始值重置
+    //        $(this).css('transform','rotateY('+(++activities_n*72)+'deg) translateZ(480px)');
+    //    });
+    //}
+    ////activities_timer = setInterval(activities,1500);
+    //
+    //$('#activities').on({
+    //    'click':activities,
+    //    //'mouseover':function () {
+    //    //    clearInterval(activities_timer)
+    //    //},
+    //    //'mouseout': function () {
+    //    //    activities_timer = setInterval(activities,2500);
+    //    //}
+    //});
+    ////end
+    //    注释结束点
 
     //ie活动图片展示 start
     //end
 
     //检测ie start
-    (function (){
+    function judgeie(){
         var userAgent = navigator.userAgent,
             rMsie = /(msie\s|trident.*rv:)([\w.]+)/;
         var ua = userAgent.toLowerCase();
@@ -136,9 +138,8 @@ $(function () {
             }
         }
         var browserMatch = uaMatch(ua);
-    }());
-
-
+    };
+    judgeie();
     //end
 })
 
