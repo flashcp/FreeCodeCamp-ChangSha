@@ -141,6 +141,26 @@ $(function () {
     };
     judgeie();
     //end
+
+    //ie下活动图片 start
+    var s_pic=$('#activities li'),$l_pic=$('#activities .pic');
+    console.log($l_pic);
+    console.log($l_pic[0]);
+    console.log($($l_pic[0]));
+
+    s_pic.on('click', function () {
+        $l_pic.css('display','none');
+        console.log(this,1);
+        console.log($(this),2);
+        var num=$(this).index();
+                    //this $this 与 $(this)的区别：
+                    // this是一个html元素，其没有jq的方法或者属性；
+                    // $this 只是个变量名，加$是为说明其是个jquery对象。
+                    // 而$(this)则是将this表示的dom对象转为jquery对象
+                    //思考：对于一个html对象没有jq方法属性，那么可以加入$()中，将其转为jquery对象。例如本段中的$l_pic
+        $($l_pic[num]).css('display','block').hide().fadeIn('slow');
+    })
+    //end
 })
 
 
