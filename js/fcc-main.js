@@ -91,38 +91,6 @@ $(function () {
     })
     //end
 
-        //注释开始点
-    ////chrome活动图片展示 start
-    //var activities_n= 0,pic=$('.pic'),activities_k= 0,activities_timer;
-    //console.log(pic[0]);
-    //function activities() {
-    //    //遍历开始前n的初始值重置
-    //    activities_n=activities_k++;
-    //    pic.each(function (i,j) {
-    //        console.log($(this));
-    //        console.log(i,99);
-    //        console.log(activities_n,100);
-    //        //每次遍历n自加1，遍历开始前n的初始值重置
-    //        $(this).css('transform','rotateY('+(++activities_n*72)+'deg) translateZ(480px)');
-    //    });
-    //}
-    ////activities_timer = setInterval(activities,1500);
-    //
-    //$('#activities').on({
-    //    'click':activities,
-    //    //'mouseover':function () {
-    //    //    clearInterval(activities_timer)
-    //    //},
-    //    //'mouseout': function () {
-    //    //    activities_timer = setInterval(activities,2500);
-    //    //}
-    //});
-    ////end
-    //    注释结束点
-
-    //ie活动图片展示 start
-    //end
-
     //检测ie start
     function judgeie(){
         var userAgent = navigator.userAgent,
@@ -132,9 +100,12 @@ $(function () {
             var match = rMsie.exec(ua);
             if(match != null){
                 console.log('ie');
+                $('#activities').addClass('activities-ie');
             }
             else{
                 console.log('other');
+                $('#activities').addClass('activities');
+
             }
         }
         var browserMatch = uaMatch(ua);
@@ -142,16 +113,48 @@ $(function () {
     judgeie();
     //end
 
+        //注释开始点
+    //chrome活动图片展示 start
+    var activities_n= 0,pic=$('.activities .pic'),activities_k= 0,activities_timer;
+    console.log(pic[0]);
+    function activities() {
+        //遍历开始前n的初始值重置
+        activities_n=activities_k++;
+        pic.each(function (i,j) {
+            console.log($(this));
+            console.log(i,99);
+            console.log(activities_n,100);
+            //每次遍历n自加1，遍历开始前n的初始值重置
+            $(this).css('transform','rotateY('+(++activities_n*72)+'deg) translateZ(480px)');
+        });
+    }
+    //activities_timer = setInterval(activities,1500);
+
+    $('.activities').on({
+        'click':activities,
+        //'mouseover':function () {
+        //    clearInterval(activities_timer)
+        //},
+        //'mouseout': function () {
+        //    activities_timer = setInterval(activities,2500);
+        //}
+    });
+    //end
+    //    注释结束点
+
+    //ie活动图片展示 start
+    //end
+
     //ie下活动图片 start
-    var s_pic=$('#activities li'),$l_pic=$('#activities .pic');
-    console.log($l_pic);
-    console.log($l_pic[0]);
-    console.log($($l_pic[0]));
+    var s_pic=$('.activities-ie li'),$l_pic=$('.activities-ie .pic');
+    //console.log($l_pic);
+    //console.log($l_pic[0]);
+    //console.log($($l_pic[0]));
 
     s_pic.on('click', function () {
-        $l_pic.css('display','none');
-        console.log(this,1);
-        console.log($(this),2);
+        $l_pic.css('display','none').stop(true,true);
+        //console.log(this,1);
+        //console.log($(this),2);
         var num=$(this).index();
                     //this $this 与 $(this)的区别：
                     // this是一个html元素，其没有jq的方法或者属性；
@@ -159,6 +162,7 @@ $(function () {
                     // 而$(this)则是将this表示的dom对象转为jquery对象
                     //思考：对于一个html对象没有jq方法属性，那么可以加入$()中，将其转为jquery对象。例如本段中的$l_pic
         $($l_pic[num]).css('display','block').hide().fadeIn('slow');
+        //fadeIn存在一个问题，如果用户连续点击预览图，那么图片会继续渐变动画。解决：再开始时停止所有动画
     })
     //end
 })

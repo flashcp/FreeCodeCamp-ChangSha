@@ -126,57 +126,57 @@ body{
 /*技能end*/
 
 /*活动 start*/
-/*#wrapper .activities{*/
-    /*width: 600px;*/
-    /*position: fixed;*/
-    /*top: 25%;*/
-    /*left: 33%;*/
-    /*z-index: 30;*/
+#wrapper .activities{
+    width: 600px;
+    position: fixed;
+    top: 25%;
+    left: 33%;
+    z-index: 30;
 
-    /*height: 400px;*/
-    /*-webkit-transform-style: preserve-3d;*/
-    /*-moz-transform-style: preserve-3d;*/
-    /*-ms-transform-style: preserve-3d;*/
-    /*transform-style: preserve-3d;*/
-    /*perspective: 2400px;*/
-    /*-webkit-backface-visibility: hidden;*/
-    /*-moz-backface-visibility: hidden;*/
-    /*-ms-backface-visibility: hidden;*/
-    /*backface-visibility: hidden;*/
-    /*!*transition: all 1.5s;*!*/
-    /*display: none;*/
-/*}*/
-/*#wrapper .activities .pic{*/
-    /*width: 600px;*/
-    /*height: 400px;*/
-    /*position: absolute;*/
+    height: 400px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 2400px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
     /*transition: all 1.5s;*/
-/*}*/
-/*#wrapper .activities .pic:nth-child(1){*/
-    /*background: url("../images/fcc/activities-1.jpg") no-repeat center center;*/
-    /*transform:rotateY(0deg) translateZ(413px);*/
-    /*background-size: cover;*/
-/*}*/
-/*#wrapper .activities .pic:nth-child(2){*/
-    /*background: url("../images/fcc/activities-2.jpg") no-repeat center center;*/
-    /*transform:rotateY(72deg) translateZ(413px);*/
-    /*background-size: cover;*/
-/*}*/
-/*#wrapper .activities .pic:nth-child(3){*/
-    /*background: url("../images/fcc/activities-3.jpg") no-repeat center center;*/
-    /*transform:rotateY(144deg) translateZ(413px);*/
-    /*background-size: cover;*/
-/*}*/
-/*#wrapper .activities .pic:nth-child(4){*/
-    /*background: url("../images/fcc/activities-4.jpg") no-repeat center center;*/
-    /*transform:rotateY(216deg) translateZ(413px);*/
-    /*background-size: cover;*/
-/*}*/
-/*#wrapper .activities .pic:nth-child(5){*/
-    /*background: url("../images/fcc/activities-5.jpg") no-repeat center center;*/
-    /*transform:rotateY(288deg) translateZ(413px);*/
-    /*background-size: cover;*/
-/*}*/
+    display: none;
+}
+#wrapper .activities .pic{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    transition: all 1.5s;
+}
+#wrapper .activities .pic:nth-child(1){
+    background: url("../images/fcc/activities-1.jpg") no-repeat center center;
+    transform:rotateY(0deg) translateZ(413px);
+    background-size: cover;
+}
+#wrapper .activities .pic:nth-child(2){
+    background: url("../images/fcc/activities-2.jpg") no-repeat center center;
+    transform:rotateY(72deg) translateZ(413px);
+    background-size: cover;
+}
+#wrapper .activities .pic:nth-child(3){
+    background: url("../images/fcc/activities-3.jpg") no-repeat center center;
+    transform:rotateY(144deg) translateZ(413px);
+    background-size: cover;
+}
+#wrapper .activities .pic:nth-child(4){
+    background: url("../images/fcc/activities-4.jpg") no-repeat center center;
+    transform:rotateY(216deg) translateZ(413px);
+    background-size: cover;
+}
+#wrapper .activities .pic:nth-child(5){
+    background: url("../images/fcc/activities-5.jpg") no-repeat center center;
+    transform:rotateY(288deg) translateZ(413px);
+    background-size: cover;
+}
 /*end*/
 
 /*活动ie下 start*/
@@ -196,51 +196,51 @@ body{
     box-sizing: border-box;
 
 }
-#wrapper .activities-ie .pic-nav{
+#wrapper .activities-ie .gallery .pic{
+    width: 70%;
+    height: 500px;
+    display: none;
+}
+#wrapper .activities-ie .gallery .pic-nav{
     width:70%;
     height: 100px;
     margin-top: 10px;
 }
-#wrapper .activities-ie .pic-nav ul{
-    width: 80%;
+#wrapper .activities-ie .gallery .pic-nav ul{
+    width: 65%;
     margin: 0px auto;
 }
-#wrapper .activities-ie .pic-nav ul li{
+#wrapper .activities-ie .gallery .pic-nav ul li{
     display: inline-block;
     margin: 0px auto;
 }
-#wrapper .activities-ie .pic-nav img{
+
+#wrapper .activities-ie .gallery .pic-nav ul li span{
     width: 100px;
     height: 100px;
+    display: block;
 }
-#wrapper .activities .pic{
-    width: 70%;
-    height: 500px;
-    display: none;
-
-}
-#wrapper .activities .pic:nth-child(1){
+#wrapper .activities-ie .pic:nth-child(1),li:nth-child(1)>span{
     background: url("../images/fcc/activities-1.jpg") no-repeat center center;
     background-size: cover;
-
+    display: block;
 }
-#wrapper .activities .pic:nth-child(2){
+#wrapper .activities-ie .pic:nth-child(2),li:nth-child(2)>span{
     background: url("../images/fcc/activities-2.jpg") no-repeat center center;
     background-size: cover;
-    display: block;
 
 }
-#wrapper .activities .pic:nth-child(3){
+#wrapper .activities-ie .pic:nth-child(3),li:nth-child(3)>span{
     background: url("../images/fcc/activities-3.jpg") no-repeat center center;
     background-size: cover;
 
 }
-#wrapper .activities .pic:nth-child(4){
+#wrapper .activities-ie .pic:nth-child(4),li:nth-child(4)>span{
     background: url("../images/fcc/activities-4.jpg") no-repeat center center;
     background-size: cover;
 
 }
-#wrapper .activities .pic:nth-child(5){
+#wrapper .activities-ie .pic:nth-child(5),li:nth-child(5)>span{
     background: url("../images/fcc/activities-5.jpg") no-repeat center center;
     background-size: cover;
 
