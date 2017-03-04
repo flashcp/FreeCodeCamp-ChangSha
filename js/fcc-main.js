@@ -100,11 +100,11 @@ $(function () {
             var match = rMsie.exec(ua);
             if(match != null){
                 console.log('ie');
-                $('#activities').addClass('activities-ie');
+                $('#activities').addClass('activities');
             }
             else{
                 console.log('other');
-                $('#activities').addClass('activities');
+                $('#activities').addClass('activities-ie');
 
             }
         }

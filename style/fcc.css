@@ -8,10 +8,8 @@ a{
 }
 ul{
     list-style-type: none;
-    /*font-size: 0px;*/
 }
-ul li{
-}
+
 body{
     background-color: #ededed;
     background: url("../images/fcc/net-white.png") repeat center center fixed;
@@ -194,7 +192,20 @@ body{
     background-color: #999;
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 5px;
+}
+#wrapper .activities-ie .pic-intro{
 
+}
+#wrapper .activities-ie .pic-intro{
+    width: 30%;
+    padding: 40px;
+    float: right;
+    box-sizing: border-box;
+    text-align: center;
+}
+#wrapper .activities-ie .pic-intro p{
+    font-size: 18px;
 }
 #wrapper .activities-ie .gallery .pic{
     width: 70%;
