@@ -6,11 +6,11 @@
 
 $(function () {
     //群成员图片 start
-    (function abc(){
-        for (var k=1;k<=77;k++){
-            $('.bg').append('<div class="bg-part">'+'<img src="images/fcc/members/m-'+k+'.jpg"></div>');
-        }
-    }());
+    //(function abc(){
+    //    for (var k=1;k<=77;k++){
+    //        $('.bg').append('<div class="bg-part">'+'<img src="images/fcc/members/m-'+k+'.jpg"></div>');
+    //    }
+    //}());
     //end
 
     //图片高度自适应 start
