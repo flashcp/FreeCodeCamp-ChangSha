@@ -1,39 +1,20 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-a{
-    color: #000000;
-    cursor: pointer;
-}
-ul{
-    list-style-type: none;
-}
 
 body{
-    background-color: #ededed;
     background: url("../images/fcc/net-white.png") repeat center center fixed;
 }
+
 /*隐藏滚动条*/
 /*::-webkit-scrollbar{*/
     /*display:none;*/
 /*}*/
-#wrapper{
-    width: 100%;
-    /*background-color: #ededed;*/
-    /*height: 500px;*/
-    color: #000000;
-    font-family: 微软雅黑,Verdana,Arial;
-    font-size: 24px;
-}
 
-/*技能背景 start*/
+/*-------------------------------大背景*/
+
 .body-background{
     display: block;
 }
 .bg1, .bg2, .bg3 {
     position: fixed;
-
     width:100%;
     height:100%;
     background-repeat: repeat;
@@ -50,14 +31,12 @@ body{
     z-index:7;
     background-image:url("../images/fcc/bubbles3.png");
 }
-/*背景 end*/
 
-/*开头 start*/
+/*-------------------------------欢迎主页*/
+
 #wrapper .introduced{
     width: 80%;
     height: 420px;
-    margin: 0px auto;
-    background-color: #fff;
     background: url("../images/fcc/title.png") no-repeat 100% center;
     background-size: cover;
     border: 10px solid #ffffff;
@@ -77,18 +56,12 @@ body{
 #wrapper .introduced h3{
     margin-top:20px;
 }
-/*end*/
 
-/*技能start*/
+/*----------------------------------技能*/
+
 #wrapper .skills{
-    width: 80%;
-    position:  fixed;
-    top: 10%;
-    left: 10%;
     z-index: 20;
     text-align: center;
-}
-#wrapper .skills h2{
 }
 #wrapper .skills .skill-top,.skill-bottom{
     width: 80%;
@@ -100,14 +73,25 @@ body{
 #wrapper .skills .skill-bottom{
     top: 50%;
 }
-/*图标字体 start*/
 #wrapper .skill-icon{
     color: darkgreen;
     font-size: 150px;
     display: inline-block;
     width: 25%;
     margin-bottom: 50px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
+    box-sizing: border-box;
+}
+#wrapper .skill-icon img{
+    -webkit-transform: translate(0,20px);
+    -moz-transform: translate(0,20px);
+    -ms-transform: translate(0,20px);
+    -o-transform: translate(0,20px);
+    transform: translate(0,20px);
 }
 #wrapper .skill-icon:hover{
     -webkit-transform: scale(1.2);
@@ -120,10 +104,9 @@ body{
     color: #000000;
     font-size: 24px;
 }
-/*字体 end*/
-/*技能end*/
 
-/*活动 start*/
+/*------------------------------活动*/
+
 #wrapper .activities{
     width: 600px;
     position: fixed;
@@ -177,25 +160,20 @@ body{
 }
 /*end*/
 
-/*活动ie下 start*/
+/*------------------------------------活动ie下*/
+
+
 #wrapper .activities-ie{
     width: 80%;
     position: fixed;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    left: 10%;
+    top: 6%;
     z-index: 30;
-    background-color: #999;
+    background-color: rgba(0, 0, 0, 0.7);
+
     padding: 20px;
     box-sizing: border-box;
     border-radius: 5px;
-}
-#wrapper .activities-ie .pic-intro{
-
 }
 #wrapper .activities-ie .pic-intro{
     width: 30%;
@@ -203,9 +181,7 @@ body{
     float: right;
     box-sizing: border-box;
     text-align: center;
-}
-#wrapper .activities-ie .pic-intro p{
-    font-size: 18px;
+    color: #eee;
 }
 #wrapper .activities-ie .gallery .pic{
     width: 70%;
@@ -225,7 +201,6 @@ body{
     display: inline-block;
     margin: 0px auto;
 }
-
 #wrapper .activities-ie .gallery .pic-nav ul li span{
     width: 100px;
     height: 100px;
@@ -256,29 +231,51 @@ body{
     background-size: cover;
 
 }
-/*end*/
 
-/*成员 start*/
+/*------------------------------------------成员*/
+
 #wrapper .members{
-    width: 100%;
-    height: 100%;
+    width: 80%;
     position: fixed;
+    left: 10%;
     z-index: 40;
-}
-#wrapper .members .bg{
-    width: 120%;
-    font-size: 0px;
-    /*background-color: yellow;*/
-}
-#wrapper .members .bg .bg-part{
     display: inline-block;
 }
-#wrapper .members .bg .bg-part img{
-
+#wrapper .members-special{
+    height: 450px;
+    background-color: #fff;
+    float: left;
+    margin: 70px;
+    box-shadow: 2px 2px 2px #999;
 }
-/*end*/
+#wrapper .members-special .ms-image,.ms-text{
+    width: 90%;
+    margin: 0 auto;
+}
+#wrapper .members-special .ms-image{
+    height: 200px;
+    background: url("../images/fcc/members/m-6.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-transform: translate(0,-5%);
+    -moz-transform: translate(0,-5%);
+    -ms-transform: translate(0,-5%);
+    -o-transform: translate(0,-5%);
+    transform: translate(0,-5%);
+}
 
-/*加入 start*/
+@media (min-width: 769px) {
+    .col-md-4{
+        width: calc(100%/3 - 140px);
+    }
+}
+@media (max-width:768px ) {
+    .col-sm-12{
+        width: calc(100% - 140px);
+    }
+}
+
+/*----------------------------------------加入*/
+
 #wrapper .join{
     font-size: 0px;
     /*每次载入页面的时候，join模块总是跳出，此方法可以解决*/
@@ -296,7 +293,7 @@ body{
 }
 /*end*/
 
-/*路径字体start*/
+/*----------------------------------------下滚标识*/
 .introduced-direction-wrap{
     width: 50px;
     height: 100px;
@@ -326,42 +323,7 @@ body{
     }
 }
 
-/*#图层_1{*/
-    /*position: fixed;*/
-    /*top: 85%;*/
-    /*left: 20%;*/
-    /*z-index: 61;*/
-/*}*/
-/*#XMLID_20_{*/
-    /*stroke-width:0.5;*/
-    /*stroke: black;*/
-    /*fill:none;*/
-    /*stroke-linejoin:round;*/
-    /*stroke-dasharray:1280;*/
-    /*stroke-dashoffset:1280;*/
-
-    /*animation-duration: 5s;*/
-    /*animation-name: fcc;*/
-    /*animation-iteration-count: 1;*/
-    /*animation-delay: 1s;*/
-    /*-webkit-animation-fill-mode: both ;*/
-    /*-moz-animation-fill-mode: both ;*/
-    /*-o-animation-fill-mode: both ;*/
-    /*animation-fill-mode: both ;*/
-
-/*}*/
-/*@keyframes fcc {*/
-    /*80%{*/
-        /*fill: none;*/
-    /*}*/
-    /*to{*/
-        /*stroke-dashoffset:0;*/
-        /*fill:black;*/
-    /*}*/
-/*}*/
-/*end*/
-
-/*导航栏 start*/
+/*-------------------------------------左侧导航栏*/
 #wrapper nav{
     position: fixed;
     top:10%;
@@ -411,8 +373,10 @@ body{
     background-color: #000000;
     color: #ffffff;
     margin: 2px;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 30px;
+    font-weight: normal;
 }
 #wrapper nav .navigation ul li:hover{
     background-color: #222222;

@@ -25,25 +25,24 @@ $(function () {
 
     //nav导航栏跳转 start
     var position=[0,1000,2200,3700,6100],timer,currentposition,position_i;
-    console.log($("#nav_ul>a:nth-child(1)"),200);
-
+    console.log($("#nav_ul>li:nth-child(1)"),200);
     $(window).on('scroll', function () {
         var h=$(window).scrollTop();
         $("#nav_ul li").removeClass('li_current');
         if(h>=0&&h<500){
-            $("#nav_ul>a:nth-child(1) li").addClass('li_current');
+            $("#nav_ul>li:nth-child(1)").addClass('li_current');
         }
         else if(h>500&&h<2000){
-            $("#nav_ul>a:nth-child(2) li").addClass('li_current');
+            $("#nav_ul>li:nth-child(2)").addClass('li_current');
         }
         else if(h>2000&&h<2700){
-            $("#nav_ul>a:nth-child(3) li").addClass('li_current');
+            $("#nav_ul>li:nth-child(3)").addClass('li_current');
         }
         else if(h>2700&&h<5100){
-            $("#nav_ul>a:nth-child(4) li").addClass('li_current');
+            $("#nav_ul>li:nth-child(4)").addClass('li_current');
         }
         else if(h>5100&&h<6200){
-            $("#nav_ul>a:nth-child(5) li").addClass('li_current');
+            $("#nav_ul>li:nth-child(5)").addClass('li_current');
         }
     });
     function nav(){
@@ -75,7 +74,7 @@ $(function () {
             }
         }
     }
-    $("#nav_ul>a").on('click',nav);
+    $("#nav_ul>li").on('click',nav);
     console.log($(window).scrollTop(),1);
     console.log($('body').scrollTop(),2);
     //end
@@ -169,20 +168,6 @@ $(function () {
 
 
 
-
-//成员图片随机出现start
-//var mems=$('.bg').find('.bg-part'),i=1,n=0;
-//var abc=$('.bg');
-//$(window).on('scroll', function () {
-//    if($(window).scrollTop()>3500&&$(window).scrollTop()<4400){
-//        var n=($(window).scrollTop()-3500)*0.0011;
-//        $('.bg-part:even').css('opacity',n);
-//    }
-//    else{
-//        $('.bg-part:even').css('display','');
-//    }
-//})
-//end
 
 //标题旋转 start
 //var title_n= 0,head=$('.header'),title_k= 0;
