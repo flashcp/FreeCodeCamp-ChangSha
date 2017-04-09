@@ -77,7 +77,7 @@ body{
     color: darkgreen;
     font-size: 150px;
     display: inline-block;
-    width: 25%;
+    /*width: 25%;*/
     margin-bottom: 50px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -107,63 +107,63 @@ body{
 
 /*------------------------------活动*/
 
-#wrapper .activities{
-    width: 600px;
-    position: fixed;
-    top: 25%;
-    left: 33%;
-    z-index: 30;
+/*#wrapper .activities{*/
+    /*width: 600px;*/
+    /*position: fixed;*/
+    /*top: 25%;*/
+    /*left: 33%;*/
+    /*z-index: 30;*/
 
-    height: 400px;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    perspective: 2400px;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
+    /*height: 400px;*/
+    /*-webkit-transform-style: preserve-3d;*/
+    /*-moz-transform-style: preserve-3d;*/
+    /*-ms-transform-style: preserve-3d;*/
+    /*transform-style: preserve-3d;*/
+    /*perspective: 2400px;*/
+    /*-webkit-backface-visibility: hidden;*/
+    /*-moz-backface-visibility: hidden;*/
+    /*-ms-backface-visibility: hidden;*/
+    /*backface-visibility: hidden;*/
+    /*!*transition: all 1.5s;*!*/
+    /*display: none;*/
+/*}*/
+/*#wrapper .activities .pic{*/
+    /*width: 600px;*/
+    /*height: 400px;*/
+    /*position: absolute;*/
     /*transition: all 1.5s;*/
-    display: none;
-}
-#wrapper .activities .pic{
-    width: 600px;
-    height: 400px;
-    position: absolute;
-    transition: all 1.5s;
-}
-#wrapper .activities .pic:nth-child(1){
-    background: url("../images/fcc/activities-1.jpg") no-repeat center center;
-    transform:rotateY(0deg) translateZ(413px);
-    background-size: cover;
-}
-#wrapper .activities .pic:nth-child(2){
-    background: url("../images/fcc/activities-2.jpg") no-repeat center center;
-    transform:rotateY(72deg) translateZ(413px);
-    background-size: cover;
-}
-#wrapper .activities .pic:nth-child(3){
-    background: url("../images/fcc/activities-3.jpg") no-repeat center center;
-    transform:rotateY(144deg) translateZ(413px);
-    background-size: cover;
-}
-#wrapper .activities .pic:nth-child(4){
-    background: url("../images/fcc/activities-4.jpg") no-repeat center center;
-    transform:rotateY(216deg) translateZ(413px);
-    background-size: cover;
-}
-#wrapper .activities .pic:nth-child(5){
-    background: url("../images/fcc/activities-5.jpg") no-repeat center center;
-    transform:rotateY(288deg) translateZ(413px);
-    background-size: cover;
-}
-/*end*/
+/*}*/
+/*#wrapper .activities .pic:nth-child(1){*/
+    /*background: url("../images/fcc/activities-1.jpg") no-repeat center center;*/
+    /*transform:rotateY(0deg) translateZ(413px);*/
+    /*background-size: cover;*/
+/*}*/
+/*#wrapper .activities .pic:nth-child(2){*/
+    /*background: url("../images/fcc/activities-2.jpg") no-repeat center center;*/
+    /*transform:rotateY(72deg) translateZ(413px);*/
+    /*background-size: cover;*/
+/*}*/
+/*#wrapper .activities .pic:nth-child(3){*/
+    /*background: url("../images/fcc/activities-3.jpg") no-repeat center center;*/
+    /*transform:rotateY(144deg) translateZ(413px);*/
+    /*background-size: cover;*/
+/*}*/
+/*#wrapper .activities .pic:nth-child(4){*/
+    /*background: url("../images/fcc/activities-4.jpg") no-repeat center center;*/
+    /*transform:rotateY(216deg) translateZ(413px);*/
+    /*background-size: cover;*/
+/*}*/
+/*#wrapper .activities .pic:nth-child(5){*/
+    /*background: url("../images/fcc/activities-5.jpg") no-repeat center center;*/
+    /*transform:rotateY(288deg) translateZ(413px);*/
+    /*background-size: cover;*/
+/*}*/
+/*!*end*!*/
 
 /*------------------------------------活动ie下*/
 
 
-#wrapper .activities-ie{
+#wrapper .activities{
     width: 80%;
     position: fixed;
     left: 10%;
@@ -175,7 +175,7 @@ body{
     box-sizing: border-box;
     border-radius: 5px;
 }
-#wrapper .activities-ie .pic-intro{
+#wrapper .activities .pic-intro{
     width: 30%;
     padding: 40px;
     float: right;
@@ -183,50 +183,50 @@ body{
     text-align: center;
     color: #eee;
 }
-#wrapper .activities-ie .gallery .pic{
+#wrapper .activities .gallery .pic{
     width: 70%;
     height: 500px;
     display: none;
 }
-#wrapper .activities-ie .gallery .pic-nav{
+#wrapper .activities .gallery .pic-nav{
     width:70%;
     height: 100px;
     margin-top: 10px;
 }
-#wrapper .activities-ie .gallery .pic-nav ul{
+#wrapper .activities .gallery .pic-nav ul{
     width: 65%;
     margin: 0px auto;
 }
-#wrapper .activities-ie .gallery .pic-nav ul li{
+#wrapper .activities .gallery .pic-nav ul li{
     display: inline-block;
     margin: 0px auto;
 }
-#wrapper .activities-ie .gallery .pic-nav ul li span{
+#wrapper .activities .gallery .pic-nav ul li span{
     width: 100px;
     height: 100px;
     display: block;
 }
-#wrapper .activities-ie .pic:nth-child(1),li:nth-child(1)>span{
+#wrapper .activities .pic:nth-child(1),li:nth-child(1)>span{
     background: url("../images/fcc/activities-1.jpg") no-repeat center center;
     background-size: cover;
     display: block;
 }
-#wrapper .activities-ie .pic:nth-child(2),li:nth-child(2)>span{
+#wrapper .activities .pic:nth-child(2),li:nth-child(2)>span{
     background: url("../images/fcc/activities-2.jpg") no-repeat center center;
     background-size: cover;
 
 }
-#wrapper .activities-ie .pic:nth-child(3),li:nth-child(3)>span{
+#wrapper .activities .pic:nth-child(3),li:nth-child(3)>span{
     background: url("../images/fcc/activities-3.jpg") no-repeat center center;
     background-size: cover;
 
 }
-#wrapper .activities-ie .pic:nth-child(4),li:nth-child(4)>span{
+#wrapper .activities .pic:nth-child(4),li:nth-child(4)>span{
     background: url("../images/fcc/activities-4.jpg") no-repeat center center;
     background-size: cover;
 
 }
-#wrapper .activities-ie .pic:nth-child(5),li:nth-child(5)>span{
+#wrapper .activities .pic:nth-child(5),li:nth-child(5)>span{
     background: url("../images/fcc/activities-5.jpg") no-repeat center center;
     background-size: cover;
 
@@ -263,23 +263,18 @@ body{
     transform: translate(0,-5%);
 }
 
-@media (min-width: 769px) {
-    .col-md-4{
-        width: calc(100%/3 - 140px);
-    }
-}
-@media (max-width:768px ) {
-    .col-sm-12{
-        width: calc(100% - 140px);
-    }
-}
+
 
 /*----------------------------------------加入*/
 
 #wrapper .join{
+    width: 100%;
+    height: 100%;
     font-size: 0px;
     /*每次载入页面的时候，join模块总是跳出，此方法可以解决*/
-    display: none;
+    position: fixed;
+    z-index: 50;
+
 }
 #wrapper .join-icon{
     position: fixed;
@@ -381,7 +376,7 @@ body{
 #wrapper nav .navigation ul li:hover{
     background-color: #222222;
 }
-.li_current{
+.liCurrent{
     background: url("../images/fcc/sign.svg") no-repeat 95% center;
     background-size: 10%;
 }
