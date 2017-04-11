@@ -20,16 +20,43 @@ isIe8 = function (){
 }
 
 $(function () {
-    var head=$('head');
+    var head = $('head');
 
     if (isIe8()){
-
         $('html').addClass('IE8');
-        //head.append('<link'+' '+'href="style/IE8.css"'+' '+'rel="stylesheet"'+' '+'type="text/css">');
+        var delImage = $('.del');
+        var skillIcon = $('.skill-icon');
+        var picIntro = $('.pic-intro');
+        console.log(delImage);
+        console.log(skillIcon);
 
+        delImage.remove();
+        for (var i=0;i<skillIcon.length;i++){
+            skillIcon[i].style.marginLeft = '60px';
+            skillIcon[i].style.marginRight = '60px';
+        }
+        picIntro[0].style.color = '#000000';
+
+        var buttonIe = $('.button-ie');
+        var picIe = $('.pic-ie img');
+
+        (function (){
+            var i = 0;
+            buttonIe.on('click', function () {
+                picIe.css('display','none');
+                $(picIe[i]).css('display','block');
+                if (i<4){
+                    i++;
+                }
+                else {
+                    i = 0;
+                }
+            })
+        })();
     }
     else {
-        //head.append('<link'+' '+'href="style/normal.css"'+' '+'rel="stylesheet"'+' '+'type="text/css">');
+
+
         //------------------------------nav导航栏跳转 start
 
         var position = [0, 1000, 2200, 3700, 6100], timer, currentPosition, position_i;

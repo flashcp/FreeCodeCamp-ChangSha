@@ -1,0 +1,21 @@
+#wrapper .activities .gallery .pic-ie{
+    width: 80%;
+    margin: 0 auto;
+}
+#wrapper .activities .gallery .button-ie{
+    width: 100px;
+    height: 100px;
+    background-color: #20648b;
+}
+#wrapper .activities .gallery .pic-ie img{
+    display:none;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:600px;
+    _width:expression(this.width<600?"auto":"600px");
+    float: left;
+}
+#wrapper .activities .gallery .pic-ie img:first-child{
+    display: block;
+    width: 600px;
+}
