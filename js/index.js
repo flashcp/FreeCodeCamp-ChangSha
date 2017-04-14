@@ -7,45 +7,44 @@
 isIe8 = function (){
     var appName = navigator.appName;
     var appVersion = navigator.appVersion;
-    var flag = false;
-    if (appName == 'Microsoft Internet Explorer' && appVersion.match(/8./i) == '8.'){
-        flag = true;
-        console.log('ie8');
-        return flag;
-    }
-    else {
-        console.log('other');
-        return flag;
-    }
-}
+    var flag = (appName == 'Microsoft Internet Explorer' && appVersion.match(/8./i))?true:false;
+    console.log(flag);
+    return flag;
+};
 
 $(function () {
-    var head = $('head');
+
+//-----------------------------ie下不显示小标题
+//    var ie = (!!window.ActiveXObject || "ActiveXObject" in window);
+//    console.log(ie);
+//    if (ie){
+//        var title = $('.title');
+//        title.remove();
+//    }
 
     if (isIe8()){
-        $('html').addClass('IE8');
-        var delImage = $('.del');
+        var imgDel = $('.img-del');
         var skillIcon = $('.skill-icon');
         var picIntro = $('.pic-intro');
-        console.log(delImage);
-        console.log(skillIcon);
+        var nav = $('.nav');
 
-        delImage.remove();
+        imgDel.remove();
+        nav.remove();
+        picIntro[0].style.color = '#000000';
+
         for (var i=0;i<skillIcon.length;i++){
             skillIcon[i].style.marginLeft = '60px';
             skillIcon[i].style.marginRight = '60px';
         }
-        picIntro[0].style.color = '#000000';
-
-        var buttonIe = $('.button-ie');
-        var picIe = $('.pic-ie img');
 
         (function (){
-            var i = 0;
+            var buttonIe = $('.button-ie8');
+            var picIe = $('.pic-ie img');
+            var i = 1;
             buttonIe.on('click', function () {
                 picIe.css('display','none');
                 $(picIe[i]).css('display','block');
-                if (i<4){
+                if (i<picIe.length - 1){
                     i++;
                 }
                 else {
@@ -56,26 +55,25 @@ $(function () {
     }
     else {
 
+        //------------------------------nav导航栏跳转
 
-        //------------------------------nav导航栏跳转 start
-
-        var position = [0, 1000, 2200, 3700, 6100], timer, currentPosition, position_i;
+        var position = [0, 1000, 2700, 3700, 5200], timer, currentPosition, targetPosition;
         $(window).on('scroll', function () {
             var h = $(window).scrollTop();
             $("#nav_ul li").removeClass('liCurrent');
-            if (h >= 0 && h < 500) {
+            if (h >= position[0] && h < position[1] - 500) {
                 $("#nav_ul>li:nth-child(1)").addClass('liCurrent');
             }
-            else if (h > 500 && h < 2000) {
+            else if (h >= position[1] - 500 && h < position[2] - 500) {
                 $("#nav_ul>li:nth-child(2)").addClass('liCurrent');
             }
-            else if (h > 2000 && h < 2700) {
+            else if (h >= position[2] - 500 && h < position[3] - 500) {
                 $("#nav_ul>li:nth-child(3)").addClass('liCurrent');
             }
-            else if (h > 2700 && h < 5100) {
+            else if (h >= position[3] - 500 && h < position[4] - 500) {
                 $("#nav_ul>li:nth-child(4)").addClass('liCurrent');
             }
-            else if (h > 5100 && h < 6200) {
+            else if (h >= position[4] - 500 && h < 5300) {
                 $("#nav_ul>li:nth-child(5)").addClass('liCurrent');
             }
         });
@@ -85,23 +83,23 @@ $(function () {
             //设置函数调用间距为1ms
             timer = setInterval(togo, 1);
             //获取点击a标签的序号
-            position_i = $(this).index();
+            targetPosition = $(this).index();
         }
 
         function togo() {
             currentPosition = $(window).scrollTop();
-            if (currentPosition > position[position_i]) {
-                currentPosition -= 30;
+            if (currentPosition > position[targetPosition]) {
+                currentPosition -= 20;
                 window.scrollTo(0, currentPosition);
-                if (currentPosition <= position[position_i]) {
+                if (currentPosition <= position[targetPosition]) {
                     clearInterval(timer);
                     //从下到上
                 }
             }
-            else if (currentPosition <= position[position_i]) {
-                currentPosition += 30;
+            else if (currentPosition <= position[targetPosition]) {
+                currentPosition += 20;
                 window.scrollTo(0, currentPosition);
-                if (currentPosition >= position[position_i]) {
+                if (currentPosition >= position[targetPosition]) {
                     clearInterval(timer);
                     //从上到下
                 }

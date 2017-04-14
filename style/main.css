@@ -106,7 +106,7 @@ body{
 }
 
 
-/*------------------------------------活动ie下*/
+/*------------------------------------活动下*/
 
 
 #wrapper .activities{
@@ -265,7 +265,7 @@ body{
 }
 
 /*-------------------------------------左侧导航栏*/
-#wrapper nav{
+#wrapper .nav{
     position: fixed;
     top:10%;
     left:-1%;
@@ -299,16 +299,16 @@ body{
         transform: rotate(0deg);
     }
 }
-#wrapper nav .logo{
+#wrapper .nav .logo{
     background: url("../images/fcc/bar.svg") no-repeat 95% center;
     background-size: 10%;
     cursor: default;
 }
-#wrapper nav .navigation ul{
+#wrapper .nav .navigation ul{
     display: none;
     opacity: 0.8;
 }
-#wrapper nav .logo,.navigation ul li{
+#wrapper .nav .logo,.navigation ul li{
     width: 250px;
     height: 30px;
     background-color: #000000;
@@ -319,16 +319,16 @@ body{
     padding-left: 30px;
     font-weight: normal;
 }
-#wrapper nav .navigation ul li:hover{
+#wrapper .nav .navigation ul li:hover{
     background-color: #222222;
 }
 .liCurrent{
     background: url("../images/fcc/sign.svg") no-repeat 95% center;
     background-size: 10%;
 }
-/*end*/
 
-/*各区域标题 start*/
+/*-------------------------------各区域标题 start*/
+
 .title{
     width: 320px;
     height: 90px;
@@ -342,7 +342,7 @@ body{
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-#wrapper .title .head{
+#wrapper .title .title-text{
     width: 260px;
     height: 50px;
     margin: 20px auto;
@@ -358,7 +358,7 @@ body{
     backface-visibility: hidden;
     perspective: 300px;
 }
-#wrapper .title .head .header{
+#wrapper .title .title-text .header{
     width: 260px;
     height: 50px;
     position: absolute;
@@ -366,32 +366,31 @@ body{
     background-color: #ff4f00;
     color: #fff;
 }
-#wrapper .title .head .header:nth-child(1){
+#wrapper .title .title-text .header:nth-child(1){
     -webkit-transform: rotateX(0deg) translateZ(25px);
     -moz-transform: rotateX(0deg) translateZ(25px);
     -ms-transform: rotateX(0deg) translateZ(25px);
     -o-transform: rotateX(0deg) translateZ(25px);
     transform: rotateX(0deg) translateZ(25px);
 }
-#wrapper .title .head .header:nth-child(2){
+#wrapper .title .title-text .header:nth-child(2){
     -webkit-transform: rotateX(90deg) translateZ(25px);
     -moz-transform: rotateX(90deg) translateZ(25px);
     -ms-transform: rotateX(90deg) translateZ(25px);
     -o-transform: rotateX(90deg) translateZ(25px);
     transform: rotateX(90deg) translateZ(25px);
 }
-#wrapper .title .head .header:nth-child(3){
+#wrapper .title .title-text .header:nth-child(3){
     -webkit-transform: rotateX(180deg) translateZ(25px);
     -moz-transform: rotateX(180deg) translateZ(25px);
     -ms-transform: rotateX(180deg) translateZ(25px);
     -o-transform: rotateX(180deg) translateZ(25px);
     transform: rotateX(180deg) translateZ(25px);
 }
-#wrapper .title .head .header:nth-child(4){
+#wrapper .title .title-text .header:nth-child(4){
     -webkit-transform: rotateX(270deg) translateZ(25px);
     -moz-transform: rotateX(270deg) translateZ(25px);
     -ms-transform: rotateX(270deg) translateZ(25px);
     -o-transform: rotateX(270deg) translateZ(25px);
     transform: rotateX(270deg) translateZ(25px);
 }
-/*end*/

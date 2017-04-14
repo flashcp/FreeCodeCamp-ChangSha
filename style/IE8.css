@@ -1,11 +1,21 @@
+
+
+/*------------------------------------活动ie下*/
+
+#wrapper .activities .gallery .gallery-ie{
+    width: 60%;
+    position:fixed;
+}
 #wrapper .activities .gallery .pic-ie{
     width: 80%;
     margin: 0 auto;
+    float: left;
 }
-#wrapper .activities .gallery .button-ie{
-    width: 100px;
-    height: 100px;
-    background-color: #20648b;
+#wrapper .activities .gallery .button-ie8{
+    font-size: 70px;
+    float: left;
+    margin-top: 150px;
+    cursor: pointer;
 }
 #wrapper .activities .gallery .pic-ie img{
     display:none;
@@ -13,9 +23,17 @@
     margin-right: auto;
     max-width:600px;
     _width:expression(this.width<600?"auto":"600px");
-    float: left;
+    height: 400px;
+    vertical-align:text-bottom
 }
 #wrapper .activities .gallery .pic-ie img:first-child{
     display: block;
     width: 600px;
+}
+
+/*------------------------------------------成员*/
+
+#wrapper .members-special{
+    width: 260px\9;
+    height: 400px\9;
 }
