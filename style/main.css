@@ -60,6 +60,7 @@ body{
 /*----------------------------------技能*/
 
 #wrapper .skills{
+    display: none;
     z-index: 20;
     text-align: center;
 }
@@ -110,13 +111,13 @@ body{
 
 
 #wrapper .activities{
+    display: none;
     width: 80%;
     position: fixed;
     left: 10%;
     top: 6%;
     z-index: 30;
     background-color: rgba(0, 0, 0, 0.7);
-
     padding: 20px;
     box-sizing: border-box;
     border-radius: 5px;
@@ -188,6 +189,7 @@ body{
     display: inline-block;
 }
 #wrapper .members-special{
+    display: none;
     height: 450px;
     background-color: #fff;
     float: left;
@@ -214,6 +216,7 @@ body{
 /*----------------------------------------加入*/
 
 #wrapper .join{
+    display: none;
     width: 100%;
     height: 100%;
     font-size: 0px;
@@ -330,6 +333,8 @@ body{
 /*-------------------------------各区域标题 start*/
 
 .title{
+    display: none;
+
     width: 320px;
     height: 90px;
     background-color: #ff4f00;
