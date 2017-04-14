@@ -182,14 +182,13 @@ body{
 /*------------------------------------------成员*/
 
 #wrapper .members{
+    display: none;
     width: 80%;
     position: fixed;
     left: 10%;
     z-index: 40;
-    display: inline-block;
 }
 #wrapper .members-special{
-    display: none;
     height: 450px;
     background-color: #fff;
     float: left;
