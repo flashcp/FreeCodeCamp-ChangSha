@@ -124,9 +124,11 @@ $(function () {
         //----------------------------活动图片
 
         var smPic = $('.activities li'), largePic = $('.activities .pic');
+        console.log(smPic);
         smPic.on('click', function () {
             largePic.css('display', 'none').stop(true, true);
             var num = $(this).index();
+            console.log(num);
             $(largePic[num]).css('display', 'block').hide().fadeIn('slow');
         })
     }
